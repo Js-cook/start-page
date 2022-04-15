@@ -19,8 +19,10 @@
         .then(function(data){
           var list = data
           for (var i in list){
+            var colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+            var color = Math.floor(Math.random()*6)
             var widget = `
-            <div class="widget">
+            <div class="widget ${colors[color]}">
               <a href='${list[i].url}' class='link'>
                 <h2 class="widget-title">${list[i].title}</h2>
               </a>
